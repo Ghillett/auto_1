@@ -38,4 +38,12 @@ public class CashbackHackServiceTest {
 
         Assert.assertEquals(cashback.remain(1000), 0);
     }
+
+    @Test
+    public void testRemainAfterThousandSpent() {
+
+        CashbackHackService cashback = new CashbackHackService();
+
+        Assert.assertEquals(cashback.remain(1001), 999);
+    }
 }
